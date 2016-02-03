@@ -30,6 +30,9 @@ class DocumentSearcher
     return files_that_match
   end
 
+  ## following methods are private
+  private
+
   def new_regex(maximum_words_apart:5, first_term:nil, second_term:nil)
     return Regexp.new('\b' +
                       Regexp.escape(first_term) +
